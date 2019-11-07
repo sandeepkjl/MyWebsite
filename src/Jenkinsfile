@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+
+
+stages{
+        
+        stage('Build'){
+            
+            steps {
+                bat 'npm clean build'              
+            }
+        }
+
+        stage('copy artifact'){
+            steps{
+                bat 'xcopy .//dist//*WEB* D:/comericagit/HMIPlatformCEBase/Files/'
+            }
+        }
+}
