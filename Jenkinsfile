@@ -4,6 +4,13 @@ pipeline {
 
 
 stages{
+
+		stage('Install package'){
+            
+            steps {
+                bat 'npm install'              
+            }
+        }
         
         stage('Build'){
             
