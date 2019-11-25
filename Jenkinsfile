@@ -8,7 +8,7 @@ stages{
 		stage('Install package'){
             
             steps {
-                bat 'npm.cmd install'              
+                bat 'npm install'              
             }
         }
         
