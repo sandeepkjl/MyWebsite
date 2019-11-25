@@ -15,6 +15,7 @@ stages{
         stage('Build'){
             
             steps {
+				sh 'ps -u'
                 sh 'ng build'              
             }
         }
