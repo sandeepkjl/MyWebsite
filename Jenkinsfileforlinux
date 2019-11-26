@@ -27,6 +27,15 @@ stages{
                 sh 'docker build . -t mywebsite1 '              
             }
         }
+        stage('push image to docker hub'){
+            
+            steps {
+                sh 'docker login   -u ${SA_DOCKER_USERID} -p ${SA_DOCKER_PASSWORD}'
+				sh 'docker tag mywebsite1 sk6785/mywebsite1:1.0'
+				sh 'docker push  sk6785/mywebsite1:1.0'
+				
+            }
+        }
 
         
 }
