@@ -3,10 +3,28 @@
   <ul class="nav_items">
     <li class="nav_item">
       <a href="#">AboutMe</a>
+      <div  class="nav_sub_items">
+      <ul>
+        <li class="nav_sub_item">
+          <a href="#">ContactInfo</a>
+          </li>
+        <li class="nav_sub_item">
+          <a href="#">SocialMEdiaInfo</a>
+          </li>
+      </ul>
+      </div>
     </li>
 
     <li class="nav_item">
       <a href="#">MySKills</a>
+      <ul class="nav_sub_items">
+        <li class="nav_sub_item">
+          <a href="#">ContactInfo</a>
+          </li>
+        <li class="nav_sub_item">
+          <a href="#">SocialMEdiaInfo</a>
+          </li>
+      </ul>
     </li>
 
     <li class="nav_item">
@@ -15,7 +33,43 @@
   </ul>
 </nav>
 <div class="main_body">
+  <div class="container">
+    <div class="body_element1">
+      HI how are you
+      <button class="element1_button" (click)="mymethod()" >Open_Form</button>
+      </div>
+   <div class="body_element2">Hello</div>
+    <div class="body_element3">SUno</div>
+  </div>
+
+  <div id="modal">
+    <form>
+      email: <input type="text">
+      password: <input type="password">
+      <button type="submit" class="close_modal">submit</button> 
+    </form>
+  </div>
+  <div id="modal_background_color">
+    
+  </div>
+  
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <footer class="footer_body">
   <ul class="footer_items">
