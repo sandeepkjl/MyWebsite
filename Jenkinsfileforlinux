@@ -16,7 +16,7 @@ stages{
             
             steps {
 				
-                sh 'sudo ng build'              
+                sh 'ng build'              
             }
         }
 
