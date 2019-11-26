@@ -20,6 +20,14 @@ stages{
             }
         }
 
+        stage('Create Docker Image'){
+            
+            steps {
+				
+                sh 'docker build . -t mywebsite1 '              
+            }
+        }
+
         
 }
 }
