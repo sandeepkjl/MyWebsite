@@ -30,8 +30,10 @@ stages{
         stage('push image to docker registry'){
             
             steps {
+			<script>
                 docker.withRegistry('https://643873795508.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:aws-ecr-credentials') {
 				docker.image('mywebsite1').push('1.0')
+				</script>
 					}
 				
             }
