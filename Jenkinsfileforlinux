@@ -30,11 +30,9 @@ stages{
         stage('push image to docker registry'){
             
             steps {
-			script{
-                docker.withRegistry('https://643873795508.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:aws-ecr-credentials') {
-				docker.image('myangulardemo').push('1.0')
-				
-					}
+			  sh 'docker login   -u ${SA_DOCKER_USERID} -p ${SA_DOCKER_PASSWORD}'
+				sh 'docker tag fatcaapp1 sk6785/myangulardemo:1.0'
+				sh 'docker push  sk6785/myangulardemo:1.0'
 				}
             }
         }
