@@ -31,7 +31,7 @@ stages{
             
             steps {
 			  sh 'docker login   -u ${SA_DOCKER_USERID} -p ${SA_DOCKER_PASSWORD}'
-				sh 'docker tag fatcaapp1 sk6785/myangulardemo:1.0'
+				sh 'docker tag myangulardemo sk6785/myangulardemo:1.0'
 				sh 'docker push  sk6785/myangulardemo:1.0'
             }
         }
