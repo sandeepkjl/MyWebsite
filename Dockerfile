@@ -1,7 +1,7 @@
 FROM tomcat:latest
 
 
-ADD ./dist/MyWebsite webapps/
+ADD ./dist/ webapps/
 EXPOSE 8080
 
 CMD ["catalina.sh", "run"]
